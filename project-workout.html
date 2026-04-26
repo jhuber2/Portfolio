@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta
+    name="description"
+    content="Solo project page for Jack Huber's Workout Tracker app built with Python/Flask and JSON persistence."
+  />
+  <title>Workout Tracker | Jack Huber</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="project-page">
+    <div class="container">
+      <nav class="top-nav" aria-label="Back navigation">
+        <a class="back-link" href="index.html">&larr; Back to Home</a>
+      </nav>
+
+      <article class="project-detail">
+        <header class="project-detail-header">
+          <p class="section-label">Solo Project</p>
+          <h1>Workout Tracker</h1>
+        </header>
+
+        <div class="detail-section">
+          <h2>Overview</h2>
+          <p>
+            A full-stack workout tracking application with a Python/Flask REST API backend and a Vanilla JS frontend that lets users log, browse, and manage workout records. What makes it interesting is the server-side JSON persistence layer — rather than a traditional database, the Flask API reads and writes structured workout data to a flat file, seeding 30 records on first startup if none exist. I designed the persistence layer to initialize and validate itself automatically at boot, keeping the deployment simple while still demonstrating a clean client-server separation between the Netlify-hosted frontend and the Flask backend.
+          </p>
+        </div>
+
+        <div class="detail-section">
+          <h2>My Contributions</h2>
+          <ul class="detail-list">
+            <li>Designed and built the Flask REST API with full CRUD endpoints for workout records</li>
+            <li>Implemented the JSON persistence layer with automatic seeding and file validation on startup</li>
+            <li>Built the Vanilla JS frontend hosted on Netlify, consuming the Flask API</li>
+            <li>Architected the client-server separation between a static frontend and a Python backend</li>
+          </ul>
+        </div>
+
+        <div class="detail-section">
+          <h2>Tech Stack</h2>
+          <ul class="tags" aria-label="Tech stack">
+            <li class="tag">Python</li>
+            <li class="tag">Flask</li>
+            <li class="tag">JSON persistence</li>
+            <li class="tag">Vanilla JS</li>
+            <li class="tag">Netlify</li>
+          </ul>
+        </div>
+
+        <div class="detail-section">
+          <h2>Explore the Project</h2>
+          <p>
+            The frontend is hosted on Netlify. The full source code, including the Flask backend and JSON persistence implementation, is available on GitHub.
+          </p>
+          <div class="detail-actions">
+            <a class="btn btn-outline" href="https://github.com/jhuber2/solo-project-2" target="_blank" rel="noopener noreferrer">GitHub</a>
+          </div>
+        </div>
+      </article>
+    </div>
+  </main>
+</body>
+</html>

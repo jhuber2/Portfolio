@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta
     name="description"
-    content="Project page for Jack Huber's Multiplayer Battleship Game project built with FastAPI."
+    content="Team project page for Jack Huber's Multiplayer Battleship Game built with FastAPI and Vanilla JS."
   />
   <title>Multiplayer Battleship Game | Jack Huber</title>
   <link rel="stylesheet" href="style.css" />
@@ -18,50 +18,63 @@
       </nav>
 
       <article class="project-detail">
-        <header class="project-header">
-          <p class="eyebrow">Featured Project</p>
+        <header class="project-detail-header">
+          <p class="section-label">Team Project &mdash; 2 Phases</p>
           <h1>Multiplayer Battleship Game</h1>
         </header>
 
-        <section class="project-section" aria-labelledby="project-overview">
-          <h2 id="project-overview">Overview</h2>
+        <div class="detail-section">
+          <h2>Overview</h2>
           <p>
-            This project is a full multiplayer Battleship game built with FastAPI that allows players to create games, join matches, place ships, and take turns in real time. It is interesting because it manages game rules, turn logic, and shared game state across multiple players through a clean web application and REST API. I designed the backend around structured endpoints and persistent game state so the system could reliably enforce gameplay rules and support repeatable testing while still serving as a complete playable project.
+            A full-stack multiplayer Battleship game where players create lobbies, place ships, and take turns firing through a live web interface backed by a REST API. It is interesting because the system enforces all game rules server-side — turn order, ship placement validation, hit/miss tracking, and win detection — so the client stays thin and the game state is always authoritative. I architected the backend service layer and data model so that game state transitions are explicit and testable, with a dedicated test API that accepts a password header to enable controlled grading flows without touching production data.
           </p>
-        </section>
+        </div>
 
-        <section class="project-section" aria-labelledby="project-features">
-          <h2 id="project-features">Key Features</h2>
-          <ul class="project-list">
-            <li>Multiplayer game creation and player joining through the live project interface</li>
-            <li>Turn-based gameplay enforcement to preserve valid game flow</li>
-            <li>Ship placement validation to prevent invalid board states</li>
-            <li>Persistent game state for reliable match progression and testing</li>
-            <li>Full-stack project architecture built around structured REST interactions</li>
+        <div class="detail-section">
+          <h2>My Contributions</h2>
+          <ul class="detail-list">
+            <li>Designed the overall backend architecture: service layer, database schema, and Docker Compose setup</li>
+            <li>Built the Checkpoint B backend — game state management, turn enforcement, and win detection</li>
+            <li>Implemented the test endpoint suite (protected by header-based auth) for repeatable grading flows</li>
+            <li>Set up the PostgreSQL schema with SQLAlchemy models for players, games, ships, and moves</li>
+            <li>Configured Docker Compose to orchestrate the API and database with auto-table creation on startup</li>
           </ul>
-        </section>
+        </div>
 
-        <section class="project-section" aria-labelledby="project-stack">
-          <h2 id="project-stack">Tech Stack</h2>
-          <ul class="stack-list">
-            <li>Python</li>
-            <li>FastAPI</li>
-            <li>PostgreSQL</li>
-            <li>SQLAlchemy</li>
-            <li>Docker</li>
-          </ul>
-        </section>
-
-        <section class="project-section project-cta" aria-labelledby="project-links">
-          <h2 id="project-links">Explore the Project</h2>
+        <div class="detail-section">
+          <h2>Phase 1 &mdash; Backend API</h2>
           <p>
-            The primary link opens the live project, and the GitHub repository shows the implementation details behind the gameplay and backend architecture.
+            The first phase established the REST API and database layer. Built with FastAPI and PostgreSQL, it exposes endpoints for player management, game creation, ship placement, firing, and move history. All game rules are enforced in a dedicated service layer (<code>game_service.py</code>) that handles state transitions independently of the route handlers.
           </p>
-          <div class="project-links" aria-label="Project call to action links">
-            <a class="btn btn-primary" href="https://cpsc3750-battleshipproject.onrender.com/" target="_blank" rel="noopener noreferrer">View Live Project</a>
-            <a class="btn btn-secondary" href="https://github.com/jhuber2/CPSC3750_BattleshipProject" target="_blank" rel="noopener noreferrer">View GitHub</a>
+          <div class="detail-actions">
+            <a class="btn btn-filled" href="https://cpsc3750-battleshipproject.onrender.com/" target="_blank" rel="noopener noreferrer">Live App</a>
+            <a class="btn btn-outline" href="https://github.com/jhuber2/CPSC3750_BattleshipProject" target="_blank" rel="noopener noreferrer">GitHub</a>
           </div>
-        </section>
+        </div>
+
+        <div class="detail-section">
+          <h2>Phase 2 &mdash; Frontend</h2>
+          <p>
+            The second phase added a Vanilla JS frontend that connects to the Phase 1 API. Players navigate from a server config screen through a lobby to a live game board, which splits the view into your board (showing incoming hits) and a target board (your shots on the opponent). Board state is polled from the API and the UI updates automatically as turns progress.
+          </p>
+          <div class="detail-actions">
+            <a class="btn btn-filled" href="https://cpsc3750-battleshipproject.onrender.com/" target="_blank" rel="noopener noreferrer">Live App</a>
+            <a class="btn btn-outline" href="https://github.com/jhuber2/CPSC3750_BattleshipProject" target="_blank" rel="noopener noreferrer">GitHub</a>
+          </div>
+        </div>
+
+        <div class="detail-section">
+          <h2>Tech Stack</h2>
+          <ul class="tags" aria-label="Tech stack">
+            <li class="tag">Python 3.11</li>
+            <li class="tag">FastAPI</li>
+            <li class="tag">PostgreSQL 15</li>
+            <li class="tag">SQLAlchemy</li>
+            <li class="tag">Pydantic</li>
+            <li class="tag">Vanilla JS</li>
+            <li class="tag">Docker Compose</li>
+          </ul>
+        </div>
       </article>
     </div>
   </main>

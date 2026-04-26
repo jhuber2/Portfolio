@@ -1,65 +1,123 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta
     name="description"
-    content="Jack Huber - Backend and AI Systems Developer building full-stack applications."
+    content="Jack Huber - Backend and AI Systems Developer building full-stack applications and APIs."
   />
   <title>Jack Huber | Portfolio</title>
   <link rel="stylesheet" href="style.css" />
-</head> 
+</head>
 <body>
-  <!--
-    Hero section intentionally includes all 5-second-test essentials:
-    name, role, summary, featured project, and clear action links.
-  -->
-  <header class="hero" aria-labelledby="home-heading">
-    <div class="container hero-grid">
-      <section class="intro">
-        <p class="eyebrow">Technical Portfolio</p>
-        <h1 id="home-heading">Jack Huber</h1>
-        <p class="role">Backend &amp; AI Systems Developer</p>
-        <p class="summary">
+  <main>
+    <div class="container page-wrap">
+
+      <!-- ── Hero ─────────────────────────────────────────────────────────────── -->
+      <section class="hero-card" aria-labelledby="home-heading">
+        <p class="hero-name" id="home-heading">Jack Huber</p>
+        <p class="hero-role">Backend &amp; AI Systems Developer</p>
+        <p class="hero-bio">
           I build full-stack applications and AI-enabled systems with a focus on backend architecture,
           APIs, and shipping real projects.
         </p>
+        <ul class="tags hero-tags" aria-label="Tech stack">
+          <li class="tag">Python</li>
+          <li class="tag">FastAPI</li>
+          <li class="tag">Flask</li>
+          <li class="tag">PostgreSQL</li>
+          <li class="tag">Docker</li>
+          <li class="tag">Vanilla JS</li>
+          <li class="tag">C#</li>
+          <li class="tag">ASP.NET Core</li>
+        </ul>
+        <div class="hero-actions">
+          <a class="btn btn-filled" href="https://www.linkedin.com/in/jack-huber-87b518264" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+          <a class="btn btn-outline" href="https://github.com/jhuber2" target="_blank" rel="noopener noreferrer">GitHub</a>
+        </div>
       </section>
 
-      <!-- Highlighted featured project card for immediate visibility above the fold. -->
-      <aside class="project-card" aria-labelledby="project-title">
-        <p class="card-label">Featured Project</p>
-        <h2 id="project-title">Multiplayer Battleship Game</h2>
-        <p>
-          A full multiplayer Battleship project built with FastAPI that manages matches, turns, and game state so players can compete in real time.
-        </p>
-
-        <div class="project-links" aria-label="Featured project links">
-          <a class="btn btn-secondary" href="project-battleship.html">View Project</a>
-          <a class="btn btn-primary" href="https://cpsc3750-battleshipproject.onrender.com/" target="_blank" rel="noopener noreferrer">Live Project</a>
-          <a class="btn btn-secondary" href="https://github.com/jhuber2/CPSC3750_BattleshipProject" target="_blank" rel="noopener noreferrer">View GitHub</a>
+      <!-- ── Featured Project ──────────────────────────────────────────────────── -->
+      <section aria-labelledby="featured-title">
+        <div class="featured-card">
+          <p class="featured-label">Featured Project &mdash; Team &middot; 2 Phases</p>
+          <h2 class="featured-title" id="featured-title">Multiplayer Battleship Game</h2>
+          <p class="featured-desc">
+            A full-stack multiplayer Battleship game with a FastAPI backend, PostgreSQL persistence, and a Vanilla JS frontend — built as a team project across two shipped phases.
+          </p>
+          <ul class="tags featured-tags" aria-label="Tech stack">
+            <li class="tag">FastAPI</li>
+            <li class="tag">PostgreSQL</li>
+            <li class="tag">SQLAlchemy</li>
+            <li class="tag">Docker</li>
+            <li class="tag">Vanilla JS</li>
+          </ul>
+          <div class="featured-actions">
+            <a class="btn btn-filled" href="https://cpsc3750-battleshipproject.onrender.com/" target="_blank" rel="noopener noreferrer">Live App</a>
+            <a class="btn btn-outline" href="project-battleship.html">View Project</a>
+            <a class="btn btn-outline" href="https://github.com/jhuber2/CPSC3750_BattleshipProject" target="_blank" rel="noopener noreferrer">GitHub</a>
+          </div>
         </div>
-      </aside>
-    </div>
-  </header>
+      </section>
 
-  <main>
-    <!-- Small orientation section to show what visitors can explore. -->
-    <section class="discover" aria-labelledby="discover-heading">
-      <div class="container">
-        <h2 id="discover-heading">What you'll find here</h2>
-        <ul class="discover-list">
-          <li>Featured projects</li>
-          <li>Live projects</li>
-          <li>GitHub repositories</li>
-        </ul>
-      </div>
-    </section>
+      <!-- ── Other Projects ────────────────────────────────────────────────────── -->
+      <section aria-labelledby="projects-heading">
+        <p class="section-heading" id="projects-heading">Projects</p>
+        <div class="projects-grid">
+
+          <article class="project-card" aria-labelledby="card-workout">
+            <div class="project-card-header">
+              <span class="section-label">Solo Project</span>
+            </div>
+            <h3 id="card-workout">Workout Tracker</h3>
+            <p>
+              Full-stack workout tracking app with a Python/Flask REST API and Vanilla JS frontend. Backend uses JSON file persistence with automatic seeding on first startup.
+            </p>
+            <ul class="tags" aria-label="Tech stack">
+              <li class="tag">Python</li>
+              <li class="tag">Flask</li>
+              <li class="tag">Vanilla JS</li>
+              <li class="tag">Netlify</li>
+            </ul>
+            <div class="project-card-actions">
+              <a class="btn btn-outline" href="project-workout.html">View Project</a>
+            </div>
+          </article>
+
+        </div>
+      </section>
+
+      <!-- ── About ─────────────────────────────────────────────────────────────── -->
+      <section class="about-card" aria-labelledby="about-heading">
+        <p class="section-heading" id="about-heading">About</p>
+        <div class="about-grid">
+          <div class="about-bio">
+            <p>
+              I'm a Computer Science student at Clemson University with hands-on experience building and supporting production software systems. During three software engineering co-op terms, I developed full-stack features using C# and ASP.NET Core, worked with MSSQL and Oracle databases, and extended REST APIs within Agile development environments.
+            </p>
+            <p>
+              I enjoy building clean, reliable systems and solving backend problems related to data, integration, and performance. My technical interests are centered around software engineering — particularly backend and full-stack development — where I can contribute to scalable systems and well-designed application architecture.
+            </p>
+          </div>
+          <div class="about-highlights" aria-label="Experience highlights">
+            <div class="highlight-card">
+              <p class="highlight-title">3&times; Co-op Terms</p>
+              <p class="highlight-sub">Software engineering in C# / ASP.NET Core</p>
+            </div>
+            <div class="highlight-card">
+              <p class="highlight-title">Production Database Work</p>
+              <p class="highlight-sub">MSSQL and Oracle in enterprise environments</p>
+            </div>
+            <div class="highlight-card">
+              <p class="highlight-title">Agile Development</p>
+              <p class="highlight-sub">REST API work across multiple product teams</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </div>
   </main>
 </body>
 </html>
-
-
-
-
